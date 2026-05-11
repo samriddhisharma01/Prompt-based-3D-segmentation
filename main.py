@@ -242,7 +242,7 @@ def filter_boxes_by_area(bboxes, img_w, img_h, min_frac, max_frac):
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# 8. AUTO-PROFILE  ← new
+# 8. AUTO-PROFILE 
 # ═════════════════════════════════════════════════════════════════════════════
 def auto_profile(pcd, colors, target: str) -> dict:
     print("\n[auto-profile] Starting scout pass …")
@@ -289,7 +289,7 @@ def auto_profile(pcd, colors, target: str) -> dict:
         median_frac = float(np.median(all_fracs))
         print(f"[auto-profile] median box area fraction = {median_frac:.4f}")
 
-        # ── Size class (same as before) ──────────────────────────────────
+        # ── Size class  ──────────────────────────────────
         if median_frac > 0.10:
             size_class   = "large"
             min_area     = round(median_frac * 0.30, 4)
